@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" id="com.coolappz.MobileBabyColic" version="1.0.0">
+    <name>MobileBabyColic</name>
+    <description>Baby Colic</description>
+    <author email="ozkangokturk@gmail.com" href="http://www.coolappz.com">Ziya Ozkan Gokturk</author>
+    <access origin="*"/>
+    <preference name="fullscreen" value="true"/>
+    <preference name="webviewbounce" value="true"/>
+    <gap:platform name="android"/>
+    <content src="index.html"/>
+</widget>

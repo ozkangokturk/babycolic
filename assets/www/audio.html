@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>Baby Colic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.css" />
+    <link rel="stylesheet" href="css/flipclock.css"/>
+    <link rel="stylesheet" href="css/jqm-datebox.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+
+<div id="babyAudioListPage" data-role="page">
+
+    <div data-role="header" data-position="fixed" data-theme="b">
+    <a href="" data-role="button" data-inline="true" data-icon="back" onclick="goBackIndex()">Back</a>
+        <h1>Baby Mode Music</h1>
+    </div>
+    <div class="splashPanel"></div>
+    <div data-role="content">
+        <div id="countdown" class="flip-counter">
+        </div>
+    </div>
+
+    <div align="center" data-role="content">
+		<div data-role="fieldcontain">
+		   <select name="select-choice-1" id="select-choice-1">
+		      <option value="minute15">15 Minutes</option>
+		      <option value="minute30">30 Minutes</option>
+		      <option value="hour1">1 Hour</option>
+		      <option value="hour2">2 Hour</option>
+		      <option value="infinite">   ∞   </option>		      
+		   </select>
+		</div>
+    </div>
+    <div align="center" data-role="content">
+        <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+        <div id="jquery_jplayer_1" class="cp-jplayer"></div>
+        <div id="cp_container_1" class="cp-container">
+            <div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+                <div class="cp-buffer-1"></div>
+                <div class="cp-buffer-2"></div>
+            </div>
+            <div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+                <div class="cp-progress-1"></div>
+                <div class="cp-progress-2"></div>
+            </div>
+            <div class="cp-circle-control"></div>
+            <ul class="cp-controls">
+                <li><a class="cp-play" tabindex="1" onclick="playAudio()">play</a></li>
+                <li><a class="cp-pause" style="display:none;" tabindex="1" onclick="pauseAudio()">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+            </ul>
+        </div>
+    </div>    
+
+    <div data-role="footer" data-theme="b" data-position="fixed"> 
+        <h1>Colic Baby © 2013</h1> 
+    </div>
+
+</div>
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.mobile-1.3.2.js"></script>
+<script src="js/flipclock/libs/prefixfree.min.js"></script>
+<script src="js/flipclock/flipclock.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/audio.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/cordova.js"></script>
+
+
+
+</body>
+
+</html>
